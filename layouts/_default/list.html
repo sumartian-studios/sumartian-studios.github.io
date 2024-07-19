@@ -1,0 +1,27 @@
+{{ define "content" }}
+<div class="title-block secondary special">
+  <div class="title">
+    {{ $parent := .Data.Plural }}
+    {{ if (or (eq $parent "tags") (eq $parent "categories")) }}
+      <h2>
+        <a href="/{{ .Data.Plural }}/">
+          {{ .Data.Plural | upper }}
+        </a>
+        <span> / {{ title .Title | upper }}</span>
+      </h2>
+    {{ else }}
+      <h1>{{ title .Title | upper }}</h1>
+    {{ end }}
+  </div>
+</div>
+</div>
+<div class="page-wrap">
+  {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "blog") }}
+  <div class="post-card-container">
+    {{ range $paginator.Pages }}
+        {{ partial "general/post-card" . }}
+    {{ end }}
+  </div>
+  {{ partial "general/pagination" . }}
+</div>
+{{ end }}

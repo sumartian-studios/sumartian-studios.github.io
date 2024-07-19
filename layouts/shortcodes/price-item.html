@@ -1,0 +1,11 @@
+<div class="price-item">
+    <h3>
+        {{ .Params.title | upper | markdownify }}
+    </h3>
+    <p>
+        {{ .Params.description | markdownify }}
+    </p>
+    <a class="button" href="{{ .Params.link }}">
+        {{ .Params.text }}
+    </a>
+</div>

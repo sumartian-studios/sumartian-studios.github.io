@@ -1,0 +1,18 @@
+<nav class="navbar secondary">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-title" href="{{ .Site.BaseURL }}">
+        <img width="160px" height="16px" src="{{ (resources.Get .Site.Params.logo).RelPermalink }}" />
+      </a>
+    </div>
+    <input type="checkbox" id="menu-toggle" /><label for="menu-toggle" class="navbar-button"><span class="top-bar"></span><span class="middle-bar"></span><span class="bottom-bar"></span></label>
+    {{ $pageUrl := .Permalink }}
+    <div class="navbar-menu">
+      {{ range .Site.Menus.main }}
+        <a class="menu-item{{ if (eq (.URL | absURL) $pageUrl) }} active{{ end }}" href="{{ .URL }}" title="{{ .Title }}" >
+          {{ .Name }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</nav>

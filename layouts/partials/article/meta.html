@@ -1,0 +1,41 @@
+{{ if (or .Params.categories .Params.tags) }}
+<div class="secondary post-meta-container">
+  <div class="post-meta">
+    <div class="meta-content">
+
+      {{ with .Params.categories }}
+        <div class="meta-label">Written In</div>
+        <div class="meta-title">
+          {{ range . }}
+            <span>
+              <a href="/categories/{{ . | urlize }}">{{ . }}</a>
+            </span>
+          {{ end }}
+        </div>
+      {{ end }}
+
+      {{ with .Params.tags }}
+      <div class="meta-label">Tagged With</div>
+      <div class="meta-title">
+        {{ range . }}
+          <span>
+            <a href="/tags/{{ . | urlize }}"> #{{ . }}</a>
+          </span>
+        {{ end }}
+      </div>
+      {{ end }}
+
+    </div>
+    {{ with .Params.icon }}
+    {{ $icon := . }}
+
+    {{ with $.Params.categories }}
+      <div class="meta-icon">
+        <img loading="lazy" alt="Category Image" src="{{ (resources.Get $icon).RelPermalink }}" />
+      </div>
+    {{ end }}
+
+    {{ end }}
+  </div>
+</div>
+{{ end }}

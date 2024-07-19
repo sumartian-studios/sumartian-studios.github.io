@@ -1,0 +1,13 @@
+<div class="project-item-container">
+  <a class="project-item" href="{{ .Params.link }}">
+    {{ if .Params.image }}
+      <img loading="lazy" src="{{ .Params.image }}" alt="{{ .Params.title }}" width="auto" height="320px" />
+    {{ end }}
+    <div class="project-item-content">
+      <h3>{{ .Params.title }}</h3>
+      {{ if .Params.description }}
+        <p>{{ .Params.description }}</p>
+      {{ end }}
+    </div>
+  </a>
+</div>

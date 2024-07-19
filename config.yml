@@ -1,0 +1,187 @@
+# Copyright (c) 2022-2024 Sumartian Studios
+#
+# This website is free software: you can redistribute it and/or modify it under
+# the terms of the GNU General Public License v3.0.
+
+title: "Sumartian Studios"
+baseURL: "https://sumartian-studios.github.io/"
+buildFuture: true
+disableHugoGeneratorInject: true
+disableLiveReload: true
+includeNewer: true
+languageCode: "en-us"
+pluralizeListTitles: false
+preserveTaxonomyNames: true
+pygmentsCodeFences: true
+pygmentsCodefencesGuessSyntax: false
+pygmentsStyle: "monokai"
+sectionPagesMenu: "main"
+summarylength: 30
+paginate: 3
+enableRobotsTXT: true
+
+module:
+  mounts:
+    - source: content
+      target: content
+    - source: content
+      target: assets
+    - source: static
+      target: static
+    - source: layouts
+      target: layouts
+    - source: data
+      target: data
+    - source: assets
+      target: assets
+    - source: i18n
+      target: i18n
+    - source: archetypes
+      target: archetypes
+
+params:
+  logo: images/title-logo.svg
+
+  author:
+    name: Sumartian Studios
+    summary: "Sumartian Studios is a Martian media organization building futuristic products."
+
+    contact:
+      note: Feel free to contact us at your leisure. You can also start up a [public conversation](https://github.com/orgs/sumartian-studios/discussions) (otherwise expect a reply within two or three decades).
+      phone: (+2) 999-604-2391
+      address: Olympus Mons, Mars. 18°39′N 226°12′E (New Settlement South-East of UN Iris)
+      email: sumartian@proton.me
+
+    description:
+      "One of the first Martian media groups dedicated to crafting high quality software inspired by history, science-fiction, and
+      philosophy. From subliminal stimuli to space browsers to predictors of the past, we aim to build technologies that push the boundaries
+      of reality and sensibility."
+
+  footer:
+    copyright: Copyright 2022-2024 © Sumartian Studios | Made with 💕 from Mars
+
+    business:
+      left:
+        - title: Sitemap
+          link: /sitemap.xml
+        - title: Open Source
+          link: https://github.com/sumartian-studios/sumartian-studios.github.io
+        - title: Mission Status
+          link: /status/
+
+      right:
+        - title: Terms of Use
+          link: /terms-of-use/
+        - title: Security
+          link: /security/
+        - title: Privacy Policy
+          link: /privacy-policy/
+        - title: Join Us
+          link: /community/
+        - title: Disclaimer
+          link: /disclaimer/
+
+    socials:
+      - icon: icons/logos/twitter-fill.svg
+        link: https://twitter.com
+      - icon: icons/logos/github-fill.svg
+        link: https://github.com/sumartian-studios
+      - icon: icons/logos/behance-fill.svg
+        link: https://www.behance.net
+      - icon: icons/logos/youtube-fill.svg
+        link: https://youtube.com
+      - icon: icons/communication/discuss-fill.svg
+        link: https://github.com/orgs/sumartian-studios/discussions
+      - icon: icons/device/phone-fill.svg
+        link: /contact
+
+permalinks:
+  posts: "/:year/:filename/"
+
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
+  minifyOutput: true
+
+  tdewolff:
+    css:
+      keepCSS2: false
+      precision: 0
+    html:
+      keepComments: false
+      keepConditionalComments: false
+      keepDefaultAttrVals: false
+      keepDocumentTags: false
+      keepEndTags: false
+      keepQuotes: false
+      keepWhitespace: false
+    js:
+      keepVarNames: false
+      noNullishOperator: false
+      precision: 0
+    json:
+      keepNumbers: false
+      precision: 0
+    svg:
+      keepComments: false
+      precision: 0
+    xml:
+      keepWhitespace: false
+
+related:
+  includeNewer: true
+  threshold: 80
+  toLower: false
+
+  indices:
+    - name: "tags"
+      weight: 100
+    - name: "date"
+      pattern: "2006"
+      weight: 10
+
+menu:
+  main:
+    - identifier: "about"
+      name: "About"
+      url: "/about/"
+      weight: 1
+
+    - identifier: "blog"
+      name: "Blog"
+      url: "/blog/"
+      weight: 2
+
+    - identifier: "books"
+      name: "Books"
+      url: "/books/"
+      weight: 3
+
+    - identifier: "Films"
+      name: "Films"
+      url: "/films/"
+      weight: 4
+
+    - identifier: "projects"
+      name: "Projects"
+      url: "/projects/"
+      weight: 5
+
+    - identifier: "store"
+      name: "Store"
+      url: "/store/"
+      weight: 6
+
+    - identifier: "Gallery"
+      name: "Gallery"
+      url: "/gallery/"
+      weight: 7
+
+    - identifier: "Contact"
+      name: "Contact"
+      url: "/contact/"
+      weight: 8

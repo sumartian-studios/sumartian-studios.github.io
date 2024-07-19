@@ -1,0 +1,24 @@
+<head>
+  <title>{{ if .IsHome }} {{ .Site.Title }} {{ else }} {{ .Title }} | {{ .Site.Title }} {{ end }}</title>
+  {{ $styles := resources.Get "scss/style.scss" | toCSS | minify }}
+  <link rel="preload" as="style" href="{{ $styles.RelPermalink }}" />
+  <link rel="preload" href="/fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: "Roboto Condensed";
+      src: url("/fonts/RobotoCondensed-Regular.woff2");
+      font-display: block;
+    }
+  </style>
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="{{ .Site.Params.author.name }}" />
+  <meta name="description" content="{{ .Site.Params.author.summary }}" />
+  <link rel="canonical" href="{{ .Permalink }}" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#000" />
+  <link rel="manifest" href="/site.webmanifest" />
+</head>

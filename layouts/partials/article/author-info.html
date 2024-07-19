@@ -1,0 +1,14 @@
+{{ with $.Site.Params.author.description }}
+<div class="post-author-container secondary">
+  <div class="post-author-info">
+    <div class="avatar">
+      <a aria-label="Home" href="/">
+        <img loading="lazy" width="48px" height="48px" src="/favicon.ico" />
+      </a>
+    </div>
+    <div class="description">
+      <p>{{ . }}</p>
+    </div>
+  </div>
+</div>
+{{ end }}

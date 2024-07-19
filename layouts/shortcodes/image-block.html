@@ -1,0 +1,11 @@
+<div class="image-block-container {{ with .Params.secondary }}secondary{{ end }}">
+    <div class="image-block">
+        <div class="content">
+            <h3>{{ .Params.title | markdownify }}</h3>
+            <p>{{ .Params.description | markdownify }}</p>
+        </div>
+        <div class="image">
+            <img loading="lazy" src="{{ (resources.Get .Params.image).RelPermalink }}" />
+        </div>
+    </div>
+</div>

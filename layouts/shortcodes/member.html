@@ -1,0 +1,8 @@
+{{ $description := .Params.description }}
+<div class="member">
+  <span class="icon"> {{ (resources.Get (.Params.image)).Content | safeHTML }} </span>
+  <div class="content">
+    <h4>{{ .Params.name }}</h4>
+    <p>{{ .Params.description }}</p>
+  </div>
+</div>

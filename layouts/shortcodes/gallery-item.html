@@ -1,0 +1,10 @@
+{{ $size := .Params.size }}
+{{ with resources.Get .Params.source }}
+    <a href="{{ .RelPermalink }}" class="brick {{ $size }}">
+        {{ if (or (eq .MediaType.SubType "jpeg") (eq .MediaType.SubType "png")) }}
+            <img loading="lazy" width="{{ .Width }}" height="{{ .Height }}" src="{{ .RelPermalink }}" />
+        {{ else }}
+            <img loading="lazy" src="{{ .RelPermalink }}" />
+        {{ end }}
+    </a>
+{{ end }}

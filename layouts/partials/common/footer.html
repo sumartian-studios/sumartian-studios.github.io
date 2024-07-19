@@ -1,0 +1,30 @@
+<footer class="dark">
+  <div class="brand-container">
+    <div class="brand">
+      <a href="{{ .Site.BaseURL }}"><img width="130px" height="13px" src="{{ (resources.Get .Site.Params.logo).RelPermalink }}" /></a>
+      <span class="socials">
+        {{ range .Site.Params.footer.socials }}
+          <a href="{{ .link }}"><img width="18px" height="18px" src="{{ (resources.Get .icon).RelPermalink }}" /></a>
+        {{ end }}
+      </span>
+    </div>
+  </div>
+  <div class="business-container">
+    <div class="business">
+      <span class="left">
+        {{ range .Site.Params.footer.business.left }}
+        <a href="{{ .link }}"> {{ .title }} </a>
+        {{ end }}
+      </span>
+      <span class="right">
+        {{ $pageUrl := .Permalink }}
+        {{ range .Site.Params.footer.business.right }}
+          <a {{ if (eq ( .link | absURL ) $pageUrl) }}class="active"{{ end }} href="{{ .link }}">
+            {{ .title }}
+          </a>
+        {{ end }}
+      </span>
+    </div>
+  </div>
+  <span class="copyright">{{ .Site.Params.footer.copyright }}</span>
+</footer>

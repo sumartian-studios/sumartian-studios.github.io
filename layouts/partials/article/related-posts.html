@@ -1,0 +1,9 @@
+{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ $related := $pages.RelatedIndices . "tags" | first 4 }}
+{{ with $related }}
+<div class="post-card-container">
+  {{ range . }}
+    {{ partial "general/post-card" . }}
+  {{ end }}
+</div>
+{{ end }}

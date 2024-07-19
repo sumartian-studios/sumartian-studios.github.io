@@ -1,0 +1,12 @@
+<a href="{{ .Params.link }}" class="store-item">
+  <img loading="lazy" width="1000px" height="600px" src="{{ (resources.Get .Params.image).RelPermalink }}" />
+  <div class="content">
+    <h4>{{ .Params.title }}</h4>
+    <span class="price">
+      {{ .Params.price }}
+      {{ with .Params.was }}
+        <sup>{{ . }}</sup>
+      {{ end }}
+    </span>
+  </div>
+</a>

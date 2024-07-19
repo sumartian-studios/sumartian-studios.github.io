@@ -1,0 +1,29 @@
+<div class="contact">
+  <div class="information">
+    <h3>Let's Get in Touch!</h3>
+    <p>{{ .Site.Params.author.contact.note | markdownify }}</p>
+    <div class="contact-item address">
+      <span class="icon"> {{ (resources.Get "icons/map/pin-distance-fill.svg").Content | safeHTML }} </span>
+      <span>{{ .Site.Params.author.contact.address }} </span>
+    </div>
+    <div class="contact-item phone-number">
+      <span class="icon"> {{ (resources.Get "icons/device/phone-fill.svg").Content | safeHTML }} </span>
+      <span>{{ .Site.Params.author.contact.phone }} </span>
+    </div>
+    <div class="contact-item email">
+      <span class="icon"> {{ (resources.Get "icons/business/mail-star-fill.svg").Content | safeHTML }} </span>
+      <span>{{ .Site.Params.author.contact.email }} </span>
+    </div>
+  </div>
+  <form action="mailto:{{ .Site.Params.author.contact.email }}" method="get" enctype="text/plain">
+    <input type="text" name="firstname" placeholder="Your first name..." />
+    <input type="text" name="lastname" placeholder="Your last name..." />
+    <select id="planet" name="planet">
+      <option value="earth">Earth</option>
+      <option value="mars">Mars</option>
+      <option value="moon">The Moon</option>
+    </select>
+    <textarea name="subject" placeholder="Write your message... (You need mailing software installed on your device to handle the 'mailto' protocol.)"></textarea>
+    <input class="button" type="submit" value="Submit" />
+  </form>
+</div>

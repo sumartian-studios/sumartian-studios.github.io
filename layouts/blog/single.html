@@ -1,0 +1,16 @@
+{{ define "content" }}
+<article class="page-wrap">
+  <!-- Header -->
+  {{ partial "article/header.html" . }}
+  <!-- Content -->
+  {{ partial "article/content.html" . }}
+  <!-- Author Information -->
+  {{ partial "article/author-info.html" . }}
+  <!-- Meta  -->
+  {{ partial "article/meta.html" . }}
+  <!-- Navigation -->
+  {{ partial "article/navigation.html" . }}
+  <!-- Related Posts -->
+  {{ partial "article/related-posts.html" . }}
+</article>
+{{ end }}

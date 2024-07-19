@@ -1,0 +1,11 @@
+<div class="feature-item">
+    <img src="{{ (resources.Get .Params.icon).RelPermalink }}" />
+    <span class="description">
+        <h3>
+            {{ .Params.title | upper | markdownify }}
+        </h3>
+        <p>
+            {{ .Params.description | markdownify }}
+        </p>
+    </span>
+</div>
