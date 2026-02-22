@@ -1,11 +1,11 @@
 {
-  "name": "Leonardo Da Vinci",
-  "short_name": "Leonardo Da Vinci",
+  "name": "Sumartian Studios",
+  "short_name": "Sumartian Studios",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#000",
   "theme_color": "#000",
-  "description": "The blog of Leonardo Da Vinci.",
+  "description": "Website for Sumartian Studios",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
