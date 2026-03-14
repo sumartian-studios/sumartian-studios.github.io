@@ -70,9 +70,6 @@ params:
       - icon: ri-phone-fill
         link: /contact
 
-permalinks:
-  posts: "/:year/:contentbasename/"
-
 minify:
   disableCSS: false
   disableHTML: false
