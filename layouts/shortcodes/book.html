@@ -1,0 +1,14 @@
+<a href="{{ .Params.link }}" class="book {{ with .Params.unavailable }}unavailable{{ end }}">
+  {{ if .Params.remote }}
+    {{ with (resources.GetRemote .Params.image).Resize "x600" }}
+        <img loading="lazy" width="{{ .Width }}" height="{{ .Height }}" src="{{ .RelPermalink }}" />
+    {{ end }}
+  {{ else }}
+    {{ with (resources.Get .Params.image).Resize "x600" }}
+      <img loading="lazy" width="{{ .Width }}" height="{{ .Height }}" src="{{ .RelPermalink }}" />
+    {{ end }}
+  {{ end }}
+  {{ with .Params.unavailable }}
+  <span class="coming-soon">Coming Soon</span>
+  {{ end }}
+</a>

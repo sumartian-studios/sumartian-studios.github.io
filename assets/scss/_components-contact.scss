@@ -1,0 +1,115 @@
+// Contact page components
+// Contact form and information
+// -----------------------------------------------------------------------------
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  gap: 2.5rem;
+
+  .information {
+    flex-grow: 1;
+    max-width: 350px;
+
+    @media (max-height: 480px) {
+      max-width: 100%;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 1rem;
+      padding: 0.5rem 0;
+      align-items: center;
+      font-size: 0.9rem;
+      color: $primary-dim-color;
+
+      svg {
+        width: 20px;
+        height: 20px;
+
+        fill: $primary-dim-color;
+      }
+
+      i {
+        font-size: 20px;
+        color: $primary-dim-color;
+      }
+    }
+
+    .phone-number .phone-number::after {
+      content: "226-444-23231";
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 100%;
+    gap: 0.5rem;
+
+    input,
+    button,
+    textarea,
+    select,
+    option {
+      all: unset;
+      width: 100%;
+      opacity: 0.8;
+
+      &:focus {
+        border-color: $accent-color;
+        box-shadow: 0 0 10px rgba($accent-color, 0.5);
+      }
+
+      &:focus,
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    input,
+    textarea,
+    select {
+      padding: 0.25rem 0.5rem;
+      border: 2px solid $primary-border-color;
+      border-radius: 4px;
+    }
+
+    textarea {
+      height: 200px;
+      word-break: break-all;
+    }
+
+    .button {
+      text-align: center;
+      align-items: center;
+      background: linear-gradient(45deg, lighten($accent-color, 40%), lighten($accent-color, 30%));
+      color: $primary-color;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: small;
+      user-select: none;
+      box-shadow: 0 0 15px rgba($accent-color, 0.3);
+      border: 1px solid lighten($accent-color, 20%);
+      border-radius: 4px;
+      padding: 0.5rem;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+
+      &:hover {
+        box-shadow: 0 0 25px rgba($accent-color, 0.5);
+      }
+    }
+  }
+}

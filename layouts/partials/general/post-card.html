@@ -1,0 +1,25 @@
+<div class="post-card">
+  {{ $link := .RelPermalink }}
+  {{ $title := .Title }}
+
+  {{ if .Params.image }}
+    {{ with resources.Get .Params.image }}
+      <div class="post-featured">
+        <a href="{{ $link }}">
+          <img loading="lazy" width="{{ .Width }}" height="{{ .Height }}" src="{{ .RelPermalink }}" alt="Featured image for {{ $title }}"/>
+        </a>
+      </div>
+    {{ end }}
+  {{ end }}
+
+  <div class="card-info">
+    <h3 class="card-title"><a href="{{ $link }}">{{ $title }}</a></h3>
+    <div class="card-content">
+      <p>{{ .Summary }}</p>
+      <span class="card-meta">
+        <i class="ri-time-line"></i> {{ .ReadingTime }} min read
+      </span>
+      <a class="read-more" href="{{ $link }}">Read More...</a>
+    </div>
+  </div>
+</div>

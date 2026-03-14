@@ -1,0 +1,18 @@
+<div class="article-meta">
+  <span class="meta-item">
+    <i class="ri-calendar-event-line"></i>
+    {{ .Date.Format "Jan 2, 2006" }}
+  </span>
+  <span class="meta-item">
+    <i class="ri-time-line"></i>
+    {{ .ReadingTime }} min read
+  </span>
+  {{ with .Params.tags }}
+    <span class="meta-item">
+      <i class="ri-price-tag-3-line"></i>
+      {{ range $i, $tag := . }}
+        {{ if $i }}, {{ end }}<a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>
+      {{ end }}
+    </span>
+  {{ end }}
+</div>

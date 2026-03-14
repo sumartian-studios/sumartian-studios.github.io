@@ -1,0 +1,11 @@
+{{ define "content" }}
+
+<div class="title-block special dark">
+    {{ partial "general/header.html" . }}
+</div>
+
+<main class="{{ with .Params.dark }}special-dark{{ end }}">
+    {{ .Content }}
+</main>
+
+{{ end }}

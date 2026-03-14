@@ -1,0 +1,145 @@
+# Copyright (c) 2022-2026 Sumartian Studios
+#
+# This website is free software: you can redistribute it and/or modify it under
+# the terms of the GNU General Public License v3.0.
+
+title: "Sumartian Studios"
+baseURL: "https://sumartian-studios.github.io/"
+buildFuture: true
+disableHugoGeneratorInject: true
+disableLiveReload: true
+includeNewer: true
+languageCode: "en-us"
+pluralizeListTitles: false
+preserveTaxonomyNames: true
+pygmentsCodeFences: true
+pygmentsCodefencesGuessSyntax: false
+pygmentsStyle: "monokai"
+sectionPagesMenu: "main"
+summarylength: 30
+paginate: 3
+enableRobotsTXT: true
+
+params:
+  mainSections:
+    - blog
+  logo: images/title-logo.svg
+
+  author:
+    name: Sumartian Studios
+    summary: "Sumartian Studios is a software and multimedia collective building futuristic products."
+
+    contact:
+      note: Feel free to contact us at your leisure. You can also start up a [public conversation](https://github.com/orgs/sumartian-studios/discussions).
+      phone: (+2) 999-604-2391
+      address: Olympus Mons, Mars. 18°39′N 226°12′E (New Settlement South-East of UN Iris)
+      email: sumartian@proton.me
+
+    description:
+      "A software development group focused on creating innovative tools at the intersection of technology, science, and philosophy. We build systems that explore new possibilities in computing, from data analysis to novel interfaces."
+
+  footer:
+    copyright: Copyright 2018-2026 © Sumartian Studios | All rights reserved.
+
+    business:
+      left:
+        - title: Sitemap
+          link: /sitemap.xml
+        - title: Open Source
+          link: https://github.com/sumartian-studios/sumartian-studios.github.io
+        - title: Mission Status
+          link: /status/
+
+      right:
+        - title: Terms of Use
+          link: /terms-of-use/
+        - title: Security
+          link: /security/
+        - title: Privacy Policy
+          link: /privacy-policy/
+        - title: Disclaimer
+          link: /disclaimer/
+
+    socials:
+      - icon: ri-github-fill
+        link: https://github.com/sumartian-studios
+      - icon: ri-youtube-fill
+        link: https://youtube.com/SumartianStudios
+      - icon: ri-discuss-fill
+        link: https://github.com/orgs/sumartian-studios/discussions
+      - icon: ri-phone-fill
+        link: /contact
+
+permalinks:
+  posts: "/:year/:contentbasename/"
+
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
+  minifyOutput: true
+
+  tdewolff:
+    css:
+      version: 3
+      precision: 0
+    html:
+      keepComments: false
+      keepSpecialComments: false
+      keepDefaultAttrVals: false
+      keepDocumentTags: false
+      keepEndTags: false
+      keepQuotes: false
+      keepWhitespace: false
+    js:
+      keepVarNames: false
+      noNullishOperator: false
+      precision: 0
+    json:
+      keepNumbers: false
+      precision: 0
+    svg:
+      keepComments: false
+      precision: 0
+    xml:
+      keepWhitespace: false
+
+related:
+  includeNewer: true
+  threshold: 80
+  toLower: false
+
+  indices:
+    - name: "tags"
+      weight: 100
+    - name: "date"
+      pattern: "2006"
+      weight: 10
+
+menu:
+  main:
+    - identifier: "about"
+      name: "About"
+      url: "/about/"
+      weight: 1
+
+    - identifier: "blog"
+      name: "Blog"
+      url: "/blog/"
+      weight: 2
+
+    - identifier: "projects"
+      name: "Projects"
+      url: "/projects/"
+      weight: 3
+
+    - identifier: "Contact"
+      name: "Contact"
+      url: "/contact/"
+      weight: 4
+
+ignoreLogs:
+  - 'warning-goldmark-raw-html'

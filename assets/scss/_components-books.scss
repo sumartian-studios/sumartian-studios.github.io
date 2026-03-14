@@ -1,0 +1,55 @@
+// Books page components
+// -----------------------------------------------------------------------------
+
+.books {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+  margin: 2.5rem 0;
+
+  .book {
+    height: 225px;
+    position: relative;
+    background-color: $primary-background;
+    border-radius: 0.5rem;
+    padding: 4px;
+    border: 1px solid $primary-border-color;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      cursor: pointer;
+
+      img {
+        opacity: 0.8;
+      }
+    }
+
+    &.unavailable {
+      pointer-events: none;
+    }
+
+    img {
+      max-height: 100%;
+      object-fit: cover;
+      position: relative;
+      width: auto;
+      border-radius: 0.35rem;
+      background-color: $secondary-color;
+    }
+
+    .coming-soon {
+      position: absolute;
+      color: $primary-dim-color;
+      background-color: $primary-background;
+      font-size: 10px;
+      line-height: 0;
+      text-transform: uppercase;
+      bottom: 0;
+      right: 0;
+      border-radius: 0.5rem 0;
+      padding: 12px 10px;
+    }
+  }
+}

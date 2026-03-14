@@ -1,0 +1,40 @@
+<head>
+  <title>{{ if .IsHome }} {{ .Site.Title }} {{ else }} {{ .Title }} | {{ .Site.Title }} {{ end }}</title>
+  {{ $styles := resources.Get "scss/style.scss" | toCSS | minify }}
+  <link rel="preload" as="style" href="{{ $styles.RelPermalink }}" />
+  <!-- load Roboto Condensed from Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <!-- Preload critical images for performance -->
+    <link rel="preload" as="image" href="/images/banner.png" />
+    <link rel="preload" as="image" href="/images/logo.png" />
+    <link rel="preload" as="image" href="/images/astronaut-bg.svg" />
+    <link rel="preload" as="image" href="/images/og-image.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="{{ .Site.Params.author.name }}" />
+  <meta name="description" content="{{ .Site.Params.author.summary }}" />
+  <meta property="og:title" content="{{ if .IsHome }} {{ .Site.Title }} {{ else }} {{ .Title }} | {{ .Site.Title }} {{ end }}" />
+  <meta property="og:description" content="{{ .Site.Params.author.summary }}" />
+  <meta property="og:image" content="{{ .Site.BaseURL }}/images/og-image.png" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="{{ .Permalink }}" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#000" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}",
+    "description": "{{ .Site.Params.author.summary }}"
+  }
+  </script>
+</head>

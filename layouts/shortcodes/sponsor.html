@@ -1,0 +1,5 @@
+<a href="{{ .Params.link }}" class="sponsor {{ with .Params.placeholder }} placeholder {{end}}">
+    {{ with .Params.source }}
+        <img loading="lazy" src="{{ (resources.Get .).RelPermalink }}" width="200px" height="64px" />
+    {{ end }}
+</a>

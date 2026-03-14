@@ -1,0 +1,230 @@
+// Responsive media queries for all components
+// Mobile and tablet optimizations
+// -----------------------------------------------------------------------------
+
+@media only screen and (max-width: 320px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .fixed-center {
+    .title {
+      font-size: 1.6rem;
+    }
+
+    .description {
+      font-size: 0.8rem;
+      padding: 0.5em 0em;
+    }
+  }
+}
+
+@media only screen and (max-width: $article-full-width) {
+  .tabs {
+    .tab-content {
+      .tab-content-item {
+        flex: 100%;
+      }
+    }
+  }
+
+  .fixed-center {
+    .description {
+      padding: 0.5em 0em;
+    }
+  }
+
+  .navbar {
+    display: block;
+    position: fixed;
+    background-color: $secondary-background;
+    height: 4rem;
+    box-shadow: 0 2px 8px rgba($color: #000000, $alpha: 0.55);
+
+    .container {
+      display: flex;
+      height: 4rem;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+
+      .navbar-button {
+        display: block;
+        border: none;
+        padding: 2rem;
+        transition: ease transform 0.2s;
+        margin: -2rem;
+        cursor: pointer;
+
+        &:hover {
+          color: $accent-color;
+          transition: color 0.2s ease-in;
+        }
+
+        span {
+          background: currentColor;
+          transition: ease transform 0.2s;
+          display: block;
+          width: 24px;
+          height: 3px;
+        }
+
+        .middle-bar {
+          margin: 3px 0;
+        }
+      }
+
+      .navbar-menu {
+        background-color: $secondary-background;
+        line-height: 2.2em;
+        font-size: 1.5em;
+        flex-direction: column;
+      }
+
+      #menu-toggle {
+        &:not(:checked) {
+          ~ .navbar-menu {
+            display: none;
+          }
+        }
+
+        &:checked {
+          + .navbar-button {
+            .top-bar {
+              transform: rotate(45deg) translate(6px, 3px);
+            }
+            .middle-bar {
+              opacity: 0;
+            }
+            .bottom-bar {
+              transform: rotate(-45deg) translate(6px, -2px);
+            }
+          }
+
+          ~ .navbar-menu {
+            text-align: center;
+            position: absolute;
+            height: 100vh;
+            top: 4rem;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            overflow: auto;
+            padding-top: 4rem;
+            padding-bottom: 50vh;
+            box-sizing: border-box;
+
+            .menu-item {
+              display: block;
+
+              &:hover {
+                background-color: rgba($color: $accent-color, $alpha: 0.25);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page-wrap {
+    .title-block {
+      padding-top: 7rem;
+      padding-bottom: 2rem;
+    }
+
+    .post-header {
+      padding-top: 7rem;
+      padding-bottom: 0;
+
+      .post-date {
+        font-size: 0.9em;
+      }
+
+      .post-title {
+        font-size: 2.25em;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .post-featured {
+        blockquote {
+          margin: 0;
+          padding: 2em 1em;
+        }
+      }
+    }
+
+    .post-content-starter {
+      display: none;
+    }
+
+    .post-content {
+      margin-top: 1rem;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-left: 0rem;
+      }
+    }
+
+    .post-meta-container {
+      .post-meta {
+        padding: 2rem 0;
+
+        .meta-content {
+          width: 100%;
+          padding: 0 2.5rem;
+        }
+
+        .meta-icon {
+          display: none;
+        }
+      }
+    }
+
+    .post-author-container {
+      .post-author-info {
+        padding: 1em 0;
+      }
+    }
+
+    .post-card-container {
+      .post-card {
+        flex-wrap: wrap;
+
+        .post-featured {
+          width: 100%;
+          padding-bottom: 2em;
+        }
+
+        .card-info {
+          width: 100% !important;
+          padding: 0 !important;
+        }
+      }
+    }
+
+    .list-container {
+      .archive-item-date {
+        display: none;
+      }
+
+      .archive-item-link {
+        max-width: 90%;
+      }
+
+      .categories-card {
+        .card-item {
+          width: 95%;
+        }
+      }
+    }
+  }
+}

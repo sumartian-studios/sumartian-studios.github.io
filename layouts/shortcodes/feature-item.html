@@ -1,0 +1,11 @@
+<div class="feature-item">
+    <i class="ri-{{ .Params.icon }}"></i>
+    <span class="description">
+        <h3>
+            {{ .Params.title | upper | markdownify }}
+        </h3>
+        <p>
+            {{ .Params.description | markdownify }}
+        </p>
+    </span>
+</div>

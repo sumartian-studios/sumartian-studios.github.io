@@ -1,0 +1,11 @@
+<div class="home-block secondary">
+    <div class="title-container">
+        <div class="title">
+            <h1>{{ .Params.title | markdownify }}</h1>
+        </div>
+    </div>
+    <div class="image-container">
+        <div class="overlay"></div>
+        <img src="{{ (resources.Get .Params.background).RelPermalink }}" />
+    </div>
+</div>

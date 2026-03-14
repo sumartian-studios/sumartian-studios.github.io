@@ -1,0 +1,38 @@
+// Typography
+// -----------------------------------------------------------------------------
+
+$primary-font: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+  "Helvetica Neue", sans-serif;
+$secondary-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+// Measurements
+// -----------------------------------------------------------------------------
+
+$frame-max-width: 1100px; // Used by the header and footer.
+$article-width: 900px; // Used by the article content.
+$article-full-width: 900px + 88; // Used by the article container.
+
+// Colors
+// -----------------------------------------------------------------------------
+
+$accent-color: #e35e17;
+$accent-background: darken($accent-color, 42%);
+$header-background: linear-gradient(-180deg, $accent-background, black);
+$footer-background: linear-gradient(180deg, $accent-background, black);
+$foreground-color: #000000;
+$secondary-color: #666666;
+$background-color: #ffffff;
+$background-light-color: #f6f6f6;
+$background-dark-color: #aaaaaa;
+$quote-color: #333333;
+$code-background-color: #181818;
+$code-foreground-color: #eeeeee;
+$primary-background: #f6f6f6;
+$primary-color: black;
+$primary-dim-color: #666666;
+$primary-border-color: #dddddd;
+$secondary-background: #000000;
+$secondary-color: #f6f6f6;
+$secondary-active-color: #ffffff;
+$secondary-dim-color: #aaaaaa;
+$secondary-border-color: rgba(255, 255, 255, 0.15);

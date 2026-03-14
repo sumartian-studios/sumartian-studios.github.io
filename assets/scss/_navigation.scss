@@ -1,0 +1,144 @@
+// Navigation Header
+// -----------------------------------------------------------------------------
+
+.navbar {
+  height: 5rem;
+  line-height: 5rem;
+  width: 100%;
+  background: $secondary-background;
+  color: $secondary-color;
+  z-index: 9;
+
+  .container {
+    width: auto;
+    text-align: center;
+    max-width: $frame-max-width;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background: $secondary-background;
+    text-transform: uppercase;
+
+    .navbar-header {
+      .navbar-title {
+        text-align: center;
+        white-space: nowrap;
+        font-weight: bold;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .navbar-button,
+    #menu-toggle {
+      display: none;
+    }
+
+    .navbar-menu {
+      display: flex;
+      gap: 0.85rem;
+      font-weight: bold;
+
+      .menu-item {
+        transition: all 0.3s ease;
+
+        &.active {
+          color: $accent-color;
+          text-shadow: 0 0 16px rgba($accent-color, 0.8);
+        }
+
+        &:hover {
+          text-shadow: 0 0 10px rgba($accent-color, 0.8);
+          color: lighten($accent-color, 20%);
+        }
+      }
+    }
+  }
+}
+
+// Navigation Footer
+// -----------------------------------------------------------------------------
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: small;
+  margin-top: auto;
+  background: $footer-background;
+
+  .brand-container {
+    width: 100%;
+
+    .brand {
+      max-width: $frame-max-width;
+      margin: 0 auto;
+      display: flex;
+      padding: 2rem 1.5rem 1rem 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .socials {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+
+        a {
+          color: $secondary-color;
+          opacity: 0.8;
+
+          transition: opacity 0.1s;
+
+          i {
+            fill: $secondary-color;
+            font-size: 18px;
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .business-container {
+    border-top: 1px solid $secondary-border-color;
+    border-bottom: 1px solid $secondary-border-color;
+    width: 100%;
+
+    .business {
+      max-width: $frame-max-width;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .left,
+      .right {
+        display: flex;
+        flex-direction: row;
+        gap: 0 0.5rem;
+        flex-wrap: wrap;
+      }
+
+      a.active {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 1rem;
+    color: darken($secondary-color, 20%);
+  }
+}

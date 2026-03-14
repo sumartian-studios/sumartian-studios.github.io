@@ -1,0 +1,38 @@
+{{ define "content" }}
+<div class="title-block special dark">
+    {{ partial "general/header.html" . }}
+</div>
+
+<main class="{{ with .Params.dark }}special-dark{{ end }}">
+    <div class="gallery-container">
+        {{ $items := .Params.items }}
+        {{ $quantity := len $items }}
+
+        {{/* SETTINGS: Adjust these to change the look */}}
+        {{ $itemWidth := "600px" }}
+        {{ $itemHeight := "350px" }}
+        {{ $speed := "30s" }}
+
+        <div class="gallery"
+            style="--quantity: {{ $quantity }}; --width: {{ $itemWidth }}; --height: {{ $itemHeight }}; --duration: {{ $speed }};">
+            <ul class="list">
+                {{ range $index, $item := $items }}
+                {{ $position := add $index 1 }}
+                <li class="gallery-item" style="--position: {{ $position }};">
+                    <a href="{{ $item.link }}">
+
+                        {{ $image := resources.Get $item.image }}
+                        {{ with $image }}
+                        {{/* PERFORMANCE: Resize image to match CSS width for faster loading */}}
+                        {{ $resized := .Fill "600x350 webp" }}
+                        <img loading="lazy" width="{{ $resized.Width }}" height="{{ $resized.Height }}"
+                            src="{{ $resized.RelPermalink }}" alt="{{ $item.title }}" />
+                        {{ end }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</main>
+{{ end }}

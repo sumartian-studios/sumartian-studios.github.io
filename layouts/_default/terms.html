@@ -1,0 +1,24 @@
+{{ define "content" }}
+{{ $termName := .Data.Plural }}
+{{ $terms := .Data.Terms.ByCount }}
+{{ $length := len $terms }}
+{{ $type := .Type }}
+<div class="page-wrap">
+    <div class="title-block special secondary">
+      <div class="title">
+        <h1>{{ title .Title | upper }}</h1>
+      </div>
+    </div>
+  <div class="list-container">
+    {{ if and $.Site.Taxonomies.categories (eq $termName "categories") }}
+    <div class="tags">
+      {{ range $.Site.Taxonomies.categories.ByCount }}{{ if .Name }}<a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <small>({{ .Count }})</small></a>{{ end }}{{ end }}
+    </div>
+    {{ else if and $.Site.Taxonomies.tags (eq $termName "tags") }}
+    <div class="tags">
+      {{ range $.Site.Taxonomies.tags.ByCount }}{{ if .Name }}<a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <small>({{ .Count }})</small></a>{{ end }}{{ end }}
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,29 @@
+<div class="contact">
+  <div class="information">
+    <h3>Let's Get in Touch!</h3>
+    <p>{{ .Site.Params.author.contact.note | markdownify }}</p>
+    <div class="contact-item address">
+      <span class="icon"> <i class="ri-map-pin-fill"></i> </span>
+      <span>{{ .Site.Params.author.contact.address }} </span>
+    </div>
+    <div class="contact-item phone-number">
+      <span class="icon"> <i class="ri-phone-fill"></i> </span>
+      <span>{{ .Site.Params.author.contact.phone }} </span>
+    </div>
+    <div class="contact-item email">
+      <span class="icon"> <i class="ri-mail-fill"></i> </span>
+      <span>{{ .Site.Params.author.contact.email }} </span>
+    </div>
+  </div>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="text" name="firstname" placeholder="Your first name..." />
+    <input type="text" name="lastname" placeholder="Your last name..." />
+    <select id="planet" name="planet">
+      <option value="earth">Earth</option>
+      <option value="mars">Mars</option>
+      <option value="moon">The Moon</option>
+    </select>
+    <textarea name="subject" wrap="hard" placeholder="Write your message..."></textarea>
+    <input class="button" type="submit" value="Submit" />
+  </form>
+</div>

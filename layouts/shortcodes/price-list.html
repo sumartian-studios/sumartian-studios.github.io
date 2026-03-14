@@ -1,0 +1,9 @@
+<div class="secondary">
+  <div class="price-list-container">
+    <div class="home-header">
+      <h2>{{ .Params.title | markdownify }}</h2>
+      <p>{{ .Params.description | markdownify }}</p>
+    </div>
+    <div class="price-list">{{ .Inner }}</div>
+  </div>
+</div>

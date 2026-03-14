@@ -1,0 +1,15 @@
+<div class="image-block-container {{ with .Params.dark }}secondary{{ end }}">
+    <div class="image-block">
+        <div class="content">
+            <h3>{{ .Params.title | markdownify }}</h3>
+            <p>{{ .Params.description | markdownify }}</p>
+        </div>
+        <div class="image">
+            {{ $img := resources.Get .Params.image }}
+            <picture>
+                <source srcset="{{ $img.Resize " 800x webp" }}" type="image/webp">
+                <img loading="lazy" src="{{ $img.RelPermalink }}" />
+            </picture>
+        </div>
+    </div>
+</div>

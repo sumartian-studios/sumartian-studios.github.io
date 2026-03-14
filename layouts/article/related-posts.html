@@ -1,0 +1,13 @@
+{{ $current := . }}
+{{ $related := where .Site.RegularPages "Type" "blog" | intersect (where .Site.RegularPages "Params.tags" "intersect" $current.Params.tags) | first 3 }}
+
+{{ if gt (len $related) 0 }}
+<div class="related-posts">
+  <h4>Related Posts</h4>
+  <ul>
+    {{ range $related }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
