@@ -9,7 +9,7 @@ items:
   - image: "images/skylight-project.png"
     title: Skylight
     link: https://github.com/sumartian-studios/skylight
-  - image: "images/ss5.png"
+  - image: "images/ss5.jpg"
     title: Tauroboros
     link: https://github.com/sumartian-studios/tauroboros
 ---

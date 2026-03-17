@@ -1,5 +1,5 @@
 ---
-title: "Between Mona Lisa: Steganography?"
+title: "Between Mona Lisa"
 date: 2022-12-06
 categories:
   - "The Tauroboros"

@@ -7,9 +7,7 @@
   position: relative;
   text-align: center;
 
-
   &:hover {
-
     &:after,
     &:before {
       width: 30%;
@@ -75,7 +73,6 @@
     }
 
     @media (max-width: 720px) {
-
       .image {
         padding: 2rem;
 
@@ -109,16 +106,29 @@
     position: absolute;
     max-width: 1100px;
     z-index: 1;
+    top: 10rem;
 
     .title {
       padding: 0 1.5rem 0 1.5rem;
-      font-size: larger;
       width: 760px;
 
       h1 {
+        font-size: 5.25rem;
+        line-height: 1em;
+        background: linear-gradient(90deg, #e63946 0%, #f18701 50%, #f7b733 100%);
+
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        color: transparent;
+
+        -webkit-font-smoothing: antialiased;
+      }
+
+      p {
+        font-size: 2rem;
         line-height: 1.5em;
-        text-shadow: 3px 3px $secondary-background;
-        font-size: 3.25rem;
+        color: $secondary-color;
       }
     }
   }
@@ -129,11 +139,13 @@
     max-width: 1800px;
     margin: 0 auto;
     position: relative;
-    filter: grayscale(1);
+    height: 760px;
+    overflow: hidden;
 
     img {
       width: 100%;
       z-index: -1;
+      display: block;
     }
 
     .overlay {
@@ -151,16 +163,9 @@
       position: relative;
       padding-top: 4rem;
       text-align: center;
-
-      .title {
-        padding: 0;
-        width: 100%;
-
-        h1 {
-          font-size: 2em;
-          padding: 2rem;
-        }
-      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .image-container {
@@ -185,7 +190,7 @@
   flex-wrap: wrap;
   align-items: flex-start;
   max-width: 1200px;
-  padding: 1rem 1.5rem 5rem 1.5rem;
+  padding: 10rem 1rem;
 
   .feature-item {
     display: flex;
@@ -202,20 +207,14 @@
       max-width: 500px;
     }
 
-    img {
-      width: 32px;
-      height: 32px;
-      margin: 1rem;
-      object-fit: fill;
-    }
-
     i {
       font-size: 32px;
       margin: 1rem;
+      color: $secondary-dim-color;
     }
   }
 
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 960px) {
     flex-direction: column;
 
     .feature-item {
@@ -272,6 +271,14 @@
 
   p {
     padding-bottom: 1rem;
+  }
+
+  .button {
+    background: linear-gradient(45deg, lighten($accent-color, 30%), lighten($accent-color, 40%));
+
+    box-shadow:
+      0 0 30px rgba($accent-color, 0.1),
+      0 0 60px rgba($accent-color, 0.3);
   }
 }
 
@@ -348,7 +355,7 @@
 
       &:nth-child(2) {
         background-color: lighten($secondary-background, 18%);
-        border: 2px solid lighten($accent-color, 20%);
+        border: 2px solid lighten($accent-color, 10%);
         opacity: 1;
         background: linear-gradient(45deg, lighten($secondary-background, 20%), lighten($secondary-background, 8%));
         z-index: 1;
@@ -358,8 +365,7 @@
 
         .button {
           color: $primary-background;
-          background: linear-gradient(45deg, lighten($accent-color, 5%), lighten($accent-color, 15%));
-          border-color: lighten($accent-color, 25%);
+          background: linear-gradient(45deg, lighten($accent-color, 5%), lighten($accent-color, 10%));
         }
       }
     }

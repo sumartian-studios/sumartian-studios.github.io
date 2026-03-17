@@ -35,8 +35,7 @@ params:
       address: Olympus Mons, Mars. 18°39′N 226°12′E (New Settlement South-East of UN Iris)
       email: sumartian@proton.me
 
-    description:
-      "A software development group focused on creating innovative tools at the intersection of technology, science, and philosophy. We build systems that explore new possibilities in computing, from data analysis to novel interfaces."
+    description: "A software development group focused on creating innovative tools at the intersection of technology, science, and philosophy. We build systems that explore new possibilities in computing, from data analysis to novel interfaces."
 
   footer:
     copyright: Copyright 2018-2026 © Sumartian Studios | All rights reserved.
@@ -61,13 +60,13 @@ params:
           link: /disclaimer/
 
     socials:
-      - icon: ri-github-fill
+      - icon: github-fill
         link: https://github.com/sumartian-studios
-      - icon: ri-youtube-fill
+      - icon: youtube-fill
         link: https://youtube.com/SumartianStudios
-      - icon: ri-discuss-fill
+      - icon: discuss-fill
         link: https://github.com/orgs/sumartian-studios/discussions
-      - icon: ri-phone-fill
+      - icon: phone-fill
         link: /contact
 
 minify:
@@ -139,4 +138,4 @@ menu:
       weight: 4
 
 ignoreLogs:
-  - 'warning-goldmark-raw-html'
+  - "warning-goldmark-raw-html"
