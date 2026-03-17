@@ -1,6 +1,6 @@
 <p><img style="width:100%" alt="banner" src="https://raw.githubusercontent.com/sumartian-studios/.github/master/assets/banner.png"/></p>
 
-This is the Github Pages website for [Sumartian Studios](https://sumartian.github.io) built using the Hugo static site generator.
+This is the Github Pages website for [Sumartian Studios](https://sumartian-studios.github.io) built using the Hugo static site generator.
 
 ## Getting Started
 
