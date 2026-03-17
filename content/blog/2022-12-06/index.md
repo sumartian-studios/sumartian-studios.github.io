@@ -15,8 +15,6 @@ icon: "/images/logo.svg"
 image: "/images/lisa-2.png"
 ---
 
-## Steganography
-
 Steganography is the practice of hiding data inside something else, such as a physical object or a computer file. There are various ways to create hidden messages using steganography, including secret inks, light-based methods, musical pitch keys, and different encoding algorithms for digital data. Using these techniques, one may be able to fool even some of the most perceptive analysts.
 
 The practice of concealing information within ordinary objects continues to intrigue researchers, artists, and conspiracy theorists alike. But what if one of the world's most famous paintings holds a hidden message of its own?
