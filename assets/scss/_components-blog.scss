@@ -28,6 +28,7 @@
       padding-bottom: 1rem;
       border-bottom: 1px solid $secondary-border-color;
       width: 100%;
+      font-family: $secondary-font;
     }
 
     .post-title {
@@ -81,6 +82,7 @@
         text-align: center;
         color: $secondary-dim-color;
         z-index: 2;
+        font-family: $secondary-font;
       }
     }
   }
