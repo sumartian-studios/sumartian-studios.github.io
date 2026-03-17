@@ -3,15 +3,15 @@
     <h3>Let's Get in Touch!</h3>
     <p>{{ .Site.Params.author.contact.note | markdownify }}</p>
     <div class="contact-item address">
-      <span class="icon"> <i class="ri-map-pin-fill"></i> </span>
+      <span class="icon"> {{ (resources.Get "icons/earth-fill.svg").Content | safeHTML }}</i> </span>
       <span>{{ .Site.Params.author.contact.address }} </span>
     </div>
     <div class="contact-item phone-number">
-      <span class="icon"> <i class="ri-phone-fill"></i> </span>
+      <span class="icon"> {{ (resources.Get "icons/phone-fill.svg").Content | safeHTML }}</i> </span>
       <span>{{ .Site.Params.author.contact.phone }} </span>
     </div>
     <div class="contact-item email">
-      <span class="icon"> <i class="ri-mail-fill"></i> </span>
+      <span class="icon"> {{ (resources.Get "icons/mail-fill.svg").Content | safeHTML }}</i> </span>
       <span>{{ .Site.Params.author.contact.email }} </span>
     </div>
   </div>

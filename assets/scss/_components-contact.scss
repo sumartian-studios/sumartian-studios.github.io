@@ -32,16 +32,14 @@
       font-size: 0.9rem;
       color: $primary-dim-color;
 
-      svg {
-        width: 20px;
-        height: 20px;
+      .icon {
+        height: 22px;
 
-        fill: $primary-dim-color;
-      }
-
-      i {
-        font-size: 20px;
-        color: $primary-dim-color;
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: $primary-dim-color;
+        }
       }
     }
 
