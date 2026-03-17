@@ -276,6 +276,7 @@
 
   .post-meta-container {
     border-top: 1px solid $secondary-border-color;
+    font-family: $secondary-font;
 
     .post-meta {
       line-height: 2em;
@@ -327,6 +328,7 @@
 
   .post-navigation-container {
     padding: 0 1.5rem;
+    font-family: $secondary-font;
 
     &:last-child {
       margin-bottom: 3rem;
